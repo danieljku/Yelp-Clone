@@ -16,6 +16,10 @@ class Business: NSObject {
     let distance: String?
     let ratingImageURL: URL?
     let reviewCount: NSNumber?
+//    var reviewImageURL: URL?
+//    var reviewName: String?
+//    var reviewRatingURL: URL?
+//    var reviewExcerpt: String?
     
     init(dictionary: NSDictionary) {
         name = dictionary["name"] as? String
@@ -73,6 +77,43 @@ class Business: NSObject {
         }
         
         reviewCount = dictionary["review_count"] as? NSNumber
+        
+
+        
+//        let reviewDict = dictionary["reviews"] as? [[NSDictionary]]
+//        if reviewDict != nil{
+//            var reviewInfos = [NSDictionary]()
+//            for review in reviewDict!{
+//                let reviewInfo = review[0]
+//                reviewInfos.append(reviewInfo)
+//            }
+//            let reviewUser = reviewInfos[0]["user"] as? NSDictionary
+//            
+//            let reviewImageURLString = reviewUser?["image_url"] as? String
+//            if reviewImageURLString != nil{
+//                reviewImageURL = URL(string: reviewImageURLString!)
+//            }else{
+//                reviewImageURL = nil
+//            }
+//            
+//            reviewName = reviewUser?["name"] as? String
+//            
+//            let reviewRatingURLString = reviewInfos[0]["rating_image_large_url"] as? String
+//            if reviewRatingURLString != nil{
+//                reviewRatingURL = URL(string: reviewRatingURLString!)
+//            }else{
+//                reviewRatingURL = nil
+//            }
+//            
+//            reviewExcerpt = reviewInfos[0]["excerpt"] as? String
+//        }
+//        
+//        reviewImageURL = nil
+//        reviewName = nil
+//        reviewRatingURL = nil
+//        reviewExcerpt = nil
+        
+        
     }
     
     class func businesses(array: [NSDictionary]) -> [Business] {
@@ -84,11 +125,11 @@ class Business: NSObject {
         return businesses
     }
     
-    class func searchWithTerm(term: String, completion: @escaping ([Business]?, Error?) -> Void) {
-        _ = YelpClient.sharedInstance.searchWithTerm(term, completion: completion)
+    class func searchWithTerm(term: String, offset: Int?, limit: Int?, completion: @escaping ([Business]?, Error?) -> Void) {
+        _ = YelpClient.sharedInstance.searchWithTerm(term, offset: offset, limit: limit, completion: completion)
     }
     
     class func searchWithTerm(term: String, sort: YelpSortMode?, categories: [String]?, deals: Bool?, completion: @escaping ([Business]?, Error?) -> Void) -> Void {
-        _ = YelpClient.sharedInstance.searchWithTerm(term, sort: sort, categories: categories, deals: deals, completion: completion)
+        _ = YelpClient.sharedInstance.searchWithTerm(term, offset: nil, limit: nil, sort: sort, categories: categories, deals: deals, completion: completion)
     }
 }

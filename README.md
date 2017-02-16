@@ -2,7 +2,7 @@
 
 YelpClone is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
 
-Time spent: 2 hours spent in total
+Time spent: 8 hours spent in total
 
 ## User Stories
 
@@ -14,31 +14,27 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Search results page
-   - [ ] Infinite scroll for restaurant results.
+- [X] Search results page
+   - [X] Infinite scroll for restaurant results.
    - [ ] Implement map view of restaurant results.
-- [ ] Implement the restaurant detail page.
-
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
+- [X] Implement the restaurant detail page.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. How to implement search bar
-2. How to add filter button onto searchbar
+1. There are a lot of auto layout problems in the video that don't correlate to swift 3 and the new Xcode.
+2. There should be a guide on how to post a comment and have that POSTed onto the yelp API.
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/aNIDhab.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/1NS7A7R.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Due to having a midterm and two projects due this week I wasn't able to put time into this app. I will implement the optionals and add more features in the next few days.
+- Figuring out how to load more data from the Yelp API was pretty challenging.
 
 ## License
 

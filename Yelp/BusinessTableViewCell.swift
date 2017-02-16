@@ -36,12 +36,12 @@ class BusinessTableViewCell: UITableViewCell {
         thumbImageView.layer.cornerRadius = 3
         thumbImageView.clipsToBounds = true
         
-        titleLabel.preferredMaxLayoutWidth = titleLabel.frame.size.width
+        //titleLabel.preferredMaxLayoutWidth = titleLabel.frame.size.width
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        titleLabel.preferredMaxLayoutWidth = titleLabel.frame.size.width
+        //titleLabel.preferredMaxLayoutWidth = titleLabel.frame.size.width
 
     }
 
